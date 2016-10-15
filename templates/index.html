@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>IPP Final Project, Group #4</title>
+        
+        <!-- Bootstrap 4 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-static-top navbar-dark bg-inverse">
+            <div class="container">
+                <a class="navbar-brand" href="/">IPP Final Project, Group #4</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1>{{ greeting }}</h1>
+                <p>This web app allows you to search for gifs in giphy.</p>
+                <a href="#searchPanel" class="btn btn-primary btn-lg" data-toggle="collapse">Start</a>
+            </div>
+        </div>                     
+        <div id="searchPanel" class="container collapse">
+            <form action="/results">
+                <div class="form-group">
+                    <label for="inputKeyword">GIF Search Keyword</label>
+                        <input name="terms" type="text" class="form-control" id="inputKeyword" aria-describedby="keywordHelp" placeholder="Enter keyword(s) for gif search">
+                    <small id="keywordHelp" class="form-text text-muted">Pick something fun!</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>        
+            <!-- Footer -->
+            <hr>
+            <footer>
+                <p>Columbia Business School, IPP, Fall 2016, Submission by James Jusung Han and Haig Nerguizian </p>
+            </footer>
+
+        </div>
+    </body>
+</html>
