@@ -34,9 +34,9 @@
 
         <!-- GIF Search Results -->
         <div class="container">
-            <div class="card-columns">          
+            <div class="card-columns">
+                {% for result in results %}          
                 <div class="card">
-                {% for result in results %}
                     <a href= {{result.url}} target="_blank">
                         <img class="card-img-top" src= {{result.media_url }} alt="Sorry, this gif did not load" style="width:100%; height:auto;">
                     </a>
