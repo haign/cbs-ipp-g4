@@ -7,7 +7,7 @@
     </head>
     <body>
         
-        <!-- Navigation Bar -->
+        <!-- Navigation Bar Linking to "Home", "About", and "Github" pages (Github link should open in new tab) -->
         <nav class="navbar navbar-static-top navbar-dark bg-inverse">
             <div class="container">
                 <a class="navbar-brand" href="/">IPP Final Project, Group #4</a>
@@ -18,13 +18,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/haign/cbs-ipp-g4" target="_blank">Our Github Repository</a>
+                    </li>
                 </ul>
             </div>
         </nav>
         
     {% if terms %}    
 
-        <!-- Jumbotron -->
+        <!-- Jumbotron assuming user inputted terms -->
         <div class="jumbotron">
             <div class="container">
                 <h1>{{ header }}</h1>                
@@ -32,7 +35,7 @@
             </div>
         </div>
 
-        <!-- GIF Search Results -->
+        <!-- GIF Search Results - if there is an issue with a particular gif output, the thumbnail should display the error message described in the "alt=" portion of the img-->
         <div class="container">
             <div class="card-columns">
                 {% for result in results %}          
@@ -47,7 +50,7 @@
 
     {% else %}
 
-        <!-- Jumbotron used for when no keyword is entered for search-->
+        <!-- Jumbotron used when no keyword is entered for search-->
         <div class="jumbotron">
             <div class="container">
                 <h1>Error! No Keywords Entered.</h1>

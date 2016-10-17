@@ -7,18 +7,18 @@ g = giphypop.Giphy()
 def header_results(terms):
     return 'GIFs tagged with: "{}"'.format(terms)
 
-# This is our index page:
+# This renders our index page:
 @app.route('/')
 def index():
     greeting = "Welcome!"
     return render_template('index.html', greeting=greeting)
 
-# This is our about page:
+# This renders our about page:
 @app.route('/about')
 def about():
     return render_template('about.html')
 
-# This is our results page:
+# This renders our results page:
 @app.route('/results')
 def results():
     terms = request.values.get('terms')
@@ -26,6 +26,9 @@ def results():
     results = g.search(terms)
     return render_template('results.html', header=header, results=results, terms=terms)
 
-
+# Use the below when pushing the web application to Heroku 
 port = int(os.environ.get("PORT", 5000))
 app.run(host="0.0.0.0", port=port)
+
+# Use the below when testing the web application on a local server
+# app.run(debug=True)

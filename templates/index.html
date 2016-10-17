@@ -9,7 +9,7 @@
     </head>
     <body>
         
-        <!-- Navigation Bar -->
+        <!-- Navigation Bar Linking to "Home", "About", and "Github" pages -->
         <nav class="navbar navbar-static-top navbar-dark bg-inverse">
             <div class="container">
                 <a class="navbar-brand" href="/">IPP Final Project, Group #4</a>
@@ -20,18 +20,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/haign/cbs-ipp-g4">Our Github Repository</a>
+                    </li>
                 </ul>
             </div>
         </nav>
         
-        <!-- Jumbotron -->
+        <!-- Jumbotron with our main greeting and start button -->
         <div class="jumbotron">
             <div class="container">
                 <h1>{{ greeting }}</h1>
                 <p>This web app allows you to search for gifs in giphy.</p>
                 <a href="#searchPanel" class="btn btn-primary btn-lg" data-toggle="collapse">Start</a>
             </div>
-        </div>                     
+        </div>
+
+        <!-- Below our Jumbotron, search form where user should input search terms-->                     
         <div id="searchPanel" class="container collapse">
             <form action="/results">
                 <div class="form-group">
